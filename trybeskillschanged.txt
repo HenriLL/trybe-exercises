@@ -1,8 +1,0 @@
-Unix
-Internet
-Html
-trybe-skills-updates
-GitHubPages
-Git
-CSS
- main
