@@ -15,6 +15,11 @@ document.querySelector('#elementoOndeVoceEsta').nextElementSibling;
 
 
 //Exercício 2
+/*
+***Crie um irmão para elementoOndeVoceEsta .
+***Crie um filho para elementoOndeVoceEsta .
+***Crie um filho para primeiroFilhoDoFilho .
+***A partir desse filho criado, acesse terceiroFilho .*/
 
 let elemento = document.querySelector('#pai');
 let novoElemento;
@@ -36,9 +41,17 @@ selecionaElemento.appendChild(filhoPrimeiro);
 document.querySelector('.filhoDoprimeiroFilho').parentNode.nextElementSibling
 
 
-/*
-***Crie um irmão para elementoOndeVoceEsta .
-***Crie um filho para elementoOndeVoceEsta .
-***Crie um filho para primeiroFilhoDoFilho .
-***A partir desse filho criado, acesse terceiroFilho .*/
+
+
+
+
+Exercício 3
+Remova todos os elementos da página, menos pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+
+let remocao = document.querySelector('#elementoOndeVoceEsta');
+for(let key in remocao){
+  let lista = remocao[key];
+  if(lista.innerHTML.include)
+}
+*/
 
