@@ -45,7 +45,10 @@ return console.log(`Olá ${Object.values(order.order.delivery)[0]}, entrega para
 customerInfo(order);
 
 const orderModifier = (order) => {
-  // Adicione abaixo as informações necessárias.
+//   // Adicione abaixo as informações necessárias.
+//   Complete a função orderModifier() para que seu retorno seja similar a "Olá Luiz Silva, o total do seu pedido de muzzarella, calabresa e Coca-Cola Zero é R$ 50,00."
+// Modifique o nome da pessoa compradora.
+// Modifique o valor total da compra para R$ 50,00.
   
 
 }
