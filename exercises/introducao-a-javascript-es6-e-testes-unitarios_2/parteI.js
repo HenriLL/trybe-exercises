@@ -34,20 +34,34 @@ const order = {
   },
 };
 
-const customerInfo = (order) => {
-  // Adicione abaixo as informações necessárias.
-//   Complete a função customerInfo() para que seu retorno seja similar a "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
-// Note que o parâmetro da função já está sendo passado na chamada da função.
-return console.log(`Olá ${Object.values(order.order.delivery)[0]}, entrega para: ${Object.values(order)[0]}, Telefone: ${Object.values(order)[1]}, ${Object.values(order.address)[0]}, Nº: ${Object.values(order.address)[1]}, AP: ${Object.values(order.address)[2]}".`)
+const customerInfo = (order) => `Olá ${order.order.delivery.deliveryPerson}, entrega para: ${order.name}, Telefone: ${order.phoneNumber}, ${order.address.street}, Nº: ${order.address.number}, AP: ${order.address.apartment}`
+  
+  // "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
 
-}
 
 customerInfo(order);
 
 const orderModifier = (order) => {
-  // Adicione abaixo as informações necessárias.
-  
+  order.order.delivery.deliveryPerson = 'Luiz Silva'
+  order.order.pizza.margherita = 'muzzarella';
+  order.order.pizza.price = 25;
+  order.order.pizza.pepperoni = 'calabreza';
+  order.order.pizza.price = 15;
+  order.payment = 50;
+  return `Olá ${order.order.delivery.deliveryPerson}, o total do seu pedido de ${order.order.pizza.margherita}, ${order.order.pizza.pepperoni} e ${order.order.drinks.coke.type} é R$ ${order.payment}.`
+  // Complete a função orderModifier() para que seu retorno seja similar a "Olá Luiz Silva, o total do seu pedido de muzzarella, calabresa e Coca-Cola Zero é R$ 50,00."
 
 }
 
 orderModifier(order);
+console.log(customerInfo(order));
+console.log(orderModifier(order));
+
+
+// Agora você vai fazer alguns exercícios de fixação.
+// Complete a função customerInfo() para que seu retorno seja similar a "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
+// Note que o parâmetro da função já está sendo passado na chamada da função.
+
+// Complete a função orderModifier() para que seu retorno seja similar a "Olá Luiz Silva, o total do seu pedido de muzzarella, calabresa e Coca-Cola Zero é R$ 50,00."
+// Modifique o nome da pessoa compradora.
+// Modifique o valor total da compra para R$ 50,00.
