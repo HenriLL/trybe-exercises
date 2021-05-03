@@ -19,7 +19,7 @@ const dragon = {
 };
 
 const battleMembers = { mage, warrior, dragon };
-
+// console.log(battleMembers)
 
 // Crie uma função que retorna o dano do dragão.
 // O dano será um número aleatório entre 15 (dano mínimo) e o valor do atributo strength (dano máximo)
@@ -42,7 +42,7 @@ const damageWarrior = (warrior) => {
   return warrior.damage
 }
 console.log(damageWarrior(warrior));
-console.log(warrior)
+
 
 
 // Crie uma função que retorna um objeto com duas chaves e dois valores contendo o dano e a mana gasta pelo mago em um turno.
@@ -83,5 +83,10 @@ console.log(dragon)
 console.log(mage)
 
 
+const gameActions = {
+  // // Crie as HOFs neste objeto.
+  // Crie a primeira HOF que compõe o objeto gameActions . Ela será a função que simula o turno do personagem warrior . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem warrior e atualizará os healthPoints do monstro dragon . Além disto ela também deve atualizar o valor da chave damage do warrior .
+  warriorD: damageWarrior(warrior)
+};
 
 
