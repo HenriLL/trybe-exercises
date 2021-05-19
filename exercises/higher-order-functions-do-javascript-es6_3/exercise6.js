@@ -64,17 +64,16 @@ const books = [
 ];
 
 const expectedResult = [
-  'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
-  'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
-  'Fundação - Ficção Científica - Isaac Asimov',
-  'Duna - Ficção Científica - Frank Herbert',
-  'A Coisa - Terror - Stephen King',
-  'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
 ];
 
-function formatedBookNames() {
+function oldBooks() {
   // escreva seu código aqui
-  return books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`)
+  let aut;
+  aut = books.filter((book) => book.releaseYear < 1961)
+  return aut.map((book) => book.name)
 }
-console.log(formatedBookNames(books))
-assert.deepStrictEqual(formatedBookNames(), expectedResult);
+console.log(oldBooks(books))
+assert.deepStrictEqual(oldBooks(), expectedResult);

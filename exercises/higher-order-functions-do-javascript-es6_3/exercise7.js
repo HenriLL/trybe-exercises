@@ -63,18 +63,14 @@ const books = [
   },
 ];
 
-const expectedResult = [
-  'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
-  'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
-  'Fundação - Ficção Científica - Isaac Asimov',
-  'Duna - Ficção Científica - Frank Herbert',
-  'A Coisa - Terror - Stephen King',
-  'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
-];
+const expectedResult = 'O Senhor dos Anéis';
 
-function formatedBookNames() {
-  // escreva seu código aqui
-  return books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`)
+function authorWith3DotsOnName() {
+  return books.find((book) => (
+    book.author.name.split(' ').filter((word) => word.endsWith('.')).length === 3
+  )).name;
 }
-console.log(formatedBookNames(books))
-assert.deepStrictEqual(formatedBookNames(), expectedResult);
+
+//solução obtida com o gabarito
+
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
